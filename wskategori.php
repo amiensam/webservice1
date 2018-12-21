@@ -83,7 +83,7 @@
 	//end delete Kategori buku
 	//Ambil semua data kategori buku 
 	$input_readall = array();//parameter ambil data kategori
-	$return_readall = array("return"=>"tnd:kategoriArray");
+	$return_readall = array("return"=>"tns:kategoriArray");
 	$server->register('readall',
 		$input_readall,
 		$return_readall,
@@ -116,8 +116,8 @@
 		}
 		return $daftar;
 	}
-	function readAll(){
-		require_once 'classDb/Classkategori';
+	function readall(){
+		require_once 'classDb/Classkategori.php';
 		$kategori = new Classkategori;
 		$hasil = $kategori->readAll();
 		$daftar = array();
